@@ -7,22 +7,21 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            Linkedlist<string> list = new Linkedlist<string>();
-            Console.WriteLine("In below para type any word to search\n");
-            Console.WriteLine("As a man was passing the elephants, he suddenly stopped, " +
-                "confused by the fact that these huge creatures were being held by only " +
-                "a small rope tied to their front leg. No chains, no cages.\n");
-            string text = Console.ReadLine();
-            Console.WriteLine("Searching word is: " + text);
-            string[] textlist = text.Split(" ");
+            LinkedList<int> List = new LinkedList<int>();
+            Console.WriteLine("Search any of no given below\n");
+            int[] number = { 1, 2, 3, 4, 5, 56, 58, 47, 54, 95, 62, 34, 547, 215, 21 };
+            int[] list = number;
+            Array.Sort(list);
+            Array.Sort(list);
+            int count = 0;
 
-            foreach (var data in textlist)
+            while (count < list.Length)
             {
-                list.Add(data);
+                List.Add(list[count++]);
             }
 
-            list.Display();
-            list.Search(text);
+            List.Display();
+            List.Search(47);
         }
     }
 }
